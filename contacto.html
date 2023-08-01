@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
+    <title>Contáctanos - IkuroPeli</title>
+    <!-- ICONO DE PESTAÑA / VENTANA / SOLAPA -->
+    <link rel="icon" href="./img/iconois.ico" />
+
+    <!-- LINK DE CSS -->
+    <link rel="stylesheet" href="./css/contacto.css">
+    
+
+</head>
+<body>
+    <!-- menu de navegacion -->
+    <nav>
+        <section class="logo">
+            <img src="img/logo-modified.png" alt="Logo de la pagina">
+            <h1>IkuroSoft</h1>
+        </section>
+
+        <section class="menu">
+            <a href="index.html"> <span class="menu-text">Inicio</span>  </a>
+                    
+            <a href="contacto.html"> <span class="menu-text">Contáctanos</span>  </a>
+            
+            <input type=button name=boton value=Cerrar class="nav-button-cerrar" onclick="window.close()">
+        </section>
+
+        
+    </nav>
+
+    <!-- Cabecera -->
+    <header  >
+        <h1>IkuroPeli</h1>
+        <h2> Todas tus peliculas en un sitio web</h2>
+
+    
+    </header>
+
+    <!-- Main - formulario -->
+    <main>
+        <section class="main-titulos">
+            <h1>CONTÁCTANOS</h1>
+            <h2>Completa con tus datos</h2>
+        </section>
+        <section class="formulario">
+            <form action="https://formspree.io/f/xoqoqeke"method="post" role="form" class="formulario-notificacion">
+            
+                <div class="grupo-input">
+                    <input type="text" name="name" id="nombre" class="form-control" id="name" placeholder="Tu nombre" required autocomplete="off">
+                    <input type="text" name="ape" class="form-control" id="ape" placeholder="Tu Apellido" required autocomplete="off">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Tu email" required autocomplete="off">
+                </div>
+                <div class="caja-comentario">
+                    <label for="comentario">Comentanos la peli que buscas..</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10"> </textarea>
+    
+                </div>    
+                <div class="contenedor-mensajes">
+                    <div class="loading">Cargando</div>
+                    <div class="error-message">ERROR!</div>
+                    <div class="sent-message"> Gracias por contactarse</div>
+                </div>   
+                
+                <button type="submit" class="btn-enviar">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+
+    <footer>
+        <section class="footer-texto">
+            <h1> IkuroSoft Derechos Reservados 2023</h1>
+            <h2>Creado por Alonso Lucia y Alonso Heber</h2>
+        </section>
+        <section class="footer-redes">
+
+        
+            <!-- iconos de redes sociales -->
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa-brands fa-facebook-square"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=uVhtDGQwY9E" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </section>
+    </footer>
+
+    <!-- LINK DE JS ENVIO -->
+    <script src="./js/contacto.js"></script>
+
+    <!-- LINK DE JS -->
+    <!-- <script src="./js/index.js"></script> -->
+
+    <!-- LINK DE FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/714631fdeb.js" ></script>
+</body>
+</html>

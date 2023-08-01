@@ -1,0 +1,446 @@
+/***********************************************
+
+ Autores: Alonso Heber - Alonso Lucia
+
+***********************************************/
+/* Estilos Generales */
+* {
+	margin: 0;
+	padding: 0;
+	/* box-sizing: border-box; */
+}
+a{
+    text-decoration: none;
+}
+
+:root{
+    --fondo-oscuro:#240473;
+    --fondo-llamativo: blueviolet;
+    --fondo-claro:#fb852d;
+    --fondo-naranja-claro:#ffc9a0;
+    --texto-blanco:#fff8f3;
+    --texto-violeta-oscuro: #12013c;
+    --texto-llamativo: red;
+    --header-height: calc(80px + 1vw);
+}
+
+body{
+    font-family: 'Montserrat','sans-serif';
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: var(--fondo-oscuro);
+    z-index: 1;
+}
+
+/* ESTILOS DE CABECERA PRINCIPAL*/
+
+/*-------------------------------------------------------------------------------------*/
+/* Navegacion - MENU  */
+
+nav{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: var(--fondo-naranja-claro) solid 2px;
+    min-height: var(--header-height);
+}
+
+.logo{
+    flex: 1 1 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1%;
+}
+
+.logo>img{
+    flex: 1 1 49%;
+    max-width: 25%;
+    height: auto;
+}
+
+
+.logo>h1{
+    flex: 1 1 50%;
+    color:var(--fondo-claro);
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    font-size: 180%;    
+}
+.menu{
+    flex: 1 1 25%;
+    border: var(--fondo-naranja-claro) solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu-text{
+    color: var(--fondo-naranja-claro);
+    text-decoration: none;
+    padding: 8% 9%;
+    border-radius: 5px;
+}
+.menu-text:hover{
+    color: var(--fondo-oscuro);
+    background-color: var(--fondo-naranja-claro);
+    transition: 0.8s;
+    border-radius: 5px;
+}
+.busqueda{
+    flex: 1 1 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.busqueda>h1{
+    color: var(--fondo-claro);
+    flex: 1 1 90%;
+    font-size: 90%;
+    text-align: center;
+   
+}
+.sel-generos{
+    font-size: 90%;
+    border-radius: 5px;
+    background-color: var(--fondo-claro);
+    padding: 1%;
+    color: var(--fondo-oscuro);
+}
+
+.texto-busca{
+    font-size: 90%;
+    border-radius: 5px;
+    background-color: var(--fondo-claro);
+    text-decoration: none;
+    border: none;
+    padding: 1%;
+    color: var(--fondo-oscuro);
+}
+.texto-busca:focus{
+    background-color: var(--fondo-naranja-claro);
+    border:var(--fondo-naranja-claro) solid 1px ;
+}
+
+.nav-button-cerrar, .sel-generos,.busqueda{
+    margin: 1%;
+}
+.nav-button-cerrar{
+    font-family:'Montserrat','sans-serif' ;
+    background-color: var(--fondo-naranja-claro);
+    border-radius: 5px;
+    color: var(--fondo-oscuro);
+    text-decoration: none;
+    padding: 1% 2%;
+}
+.nav-button-cerrar:hover{
+    background-color: var(--fondo-claro);
+    border-radius: 5px;
+    transition: 0.8s;
+    box-shadow: 5px 5px 2px 1px var(--texto-violeta-oscuro);
+    cursor: pointer;
+}
+
+/*-------------------------------------------------------------------------------------*/
+/* CABECERA - HEADER */
+
+header{
+    flex: 1 1 100%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    
+}
+header>h1,h2{
+    text-align: center;
+    align-items: center;
+    color: var(--texto-blanco);
+    z-index: 3;
+    
+}
+header>h1{
+    flex: 1 1 80%;
+    font-size: calc(26px + 2vw);
+    display: flex;
+    justify-content: center;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to left, LightYellow,yellow,Gold, orange,DarkOrange,OrangeRed, red, Crimson,DarkRed);    
+    background-size:300% ;
+    -webkit-background-clip: text;
+    animation: titulo-colores 3s linear infinite;
+    filter: drop-shadow(5px 5px 2px var(--texto-blanco));
+
+}
+
+@keyframes titulo-colores {
+    0%{
+        background-position: 0 50%;
+
+    }
+    50%{
+        background-position: 100% 50%;
+
+    }
+    100%{
+        background-position: 0 50%;
+
+    }
+}
+header>h2{
+    flex: 1 1 80%;
+    font-size: 150%;
+    color: var(--texto-blanco);
+    display: flex;
+    justify-content: center;
+}
+
+header>img{
+    position: fixed;
+    z-index: 2;
+    filter: blur(1px);
+    filter: opacity(0.5);
+
+}
+
+.animacion-rotacion {
+    animation: rotacion 10s infinite linear;
+  }
+  
+  @keyframes rotacion {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/*-------------------------------------------------------------------------------------*/
+/* ASIDE RECOMENDADOS */
+
+aside{
+    flex: 1 1 10% ;  
+    margin: 2%;
+    z-index: 3;
+}
+aside>section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+aside>h1{
+    color: var(--fondo-claro);
+    font-size: calc(10px + 1vw);
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+aside>section>article>a{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+aside>section>article>a>img{
+    flex: 1 1 40%;
+    width: 20%;
+    max-width: 230px;
+    border-radius: 7px;
+    margin: 2%;
+}
+aside>section>article>a>h1{
+    flex: 1 1 60%;
+    color: var(--texto-violeta-oscuro);
+    font-size: 80%;
+    text-align: center;
+    color:var(--fondo-claro);
+    
+}
+
+
+/* Main ------------------------- */
+main{
+    flex: 1 1 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.muestraPelis{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3;
+  
+    
+}
+.muestraPelis>article{
+    flex: 1 1 20%;
+    display: flex;
+    min-width: 150px;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-start;
+    margin: 1%;
+}
+
+.muestraPelis>article>a>img{
+    width: 80%;
+    height: auto;
+    border-radius: 7px;
+    align-items: center;
+    margin-left: 7%;
+    transition: transform 0.5s;
+}
+
+.muestraPelis>article>a>img:hover{
+    transform: translateY(-5%);
+    scale: 1.05;
+    
+}
+
+.muestraPelis>article>a>h1{
+    
+    color: var(--texto-violeta-oscuro);
+    font-size: 100%;
+    text-align: center;
+    text-shadow: 0 0 2px var(--fondo-naranja-claro);
+    z-index: 3;
+    
+}
+
+.paginacion>button{
+    position: fixed;
+    
+    border-radius: 5px;
+    color: var(--texto-blanco);
+    background-color: var(--fondo-llamativo);
+    font-size: 2vw;
+    top: 50%;
+} 
+.btnAnterior{
+    display: none;    
+    rotate: 270deg;
+    z-index: 4;
+}
+.btnSiguiente{
+    display: none;
+    right: -3%;
+    rotate: 90deg;
+    z-index: 4;
+}
+
+
+
+
+/* PRINCIPAL */
+main{
+    flex: 1 1 70%;
+    display: flex;
+    background-color: var(--fondo-claro);
+    
+}
+
+
+.main-peliculas{
+    height: 400px;
+}
+
+
+/*FOOTER -----------------------------------------------------*/
+
+
+footer{
+    flex: 1 1 100%;
+    background-color: var(--fondo-claro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-top: var(--fondo-oscuro) solid 10px;
+    
+}
+.footer-contador{
+    z-index: 3;
+    flex: 1 1 10%;
+}
+.footer-texto{
+    z-index: 3;
+    flex: 1 1 55%;
+}
+footer>.footer-texto>h1,h2{  
+    margin-top: 2%;
+    color: var(--texto-violeta-oscuro);
+    text-shadow: 0 0 2px var(--fondo-claro);
+    font-size: 110%;
+    text-align: center;
+    
+    
+}
+.footer-redes{
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-redes>a>i{
+    font-size: 200%;
+    
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+/* MEDIA QUERYS */
+
+@media (max-width: 780px) {
+
+    .logo{
+        flex: 1 1 80%;
+    }
+    .menu{
+        flex: 1 1 90%;
+    }
+
+    .busqueda{
+        margin: 2%;
+    }
+    aside{
+        flex: 1 1 100%;
+    }
+    aside>section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    aside>section>article{
+        flex: 1 1 30%;
+    }
+    aside>section>article>a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1%;
+    }
+    aside>section>article>a>img{
+        width: 90%;
+    }
+    .paginacion>button{
+        font-size: 5vw;
+    }
+    .footer-redes{
+        margin: 3%;
+        flex: 1 1 80%;
+        z-index: 4;
+    }
+}

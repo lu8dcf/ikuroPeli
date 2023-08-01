@@ -1,0 +1,342 @@
+/***********************************************
+
+ Autores: Alonso Heber - Alonso Lucia
+
+***********************************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+a{
+    text-decoration: none;
+}
+
+:root{
+    --fondo-oscuro:#240473;
+    --fondo-llamativo: blueviolet;
+    --fondo-claro:#fb852d;
+    --fondo-naranja-claro:#ffc9a0;
+    --texto-blanco:#fff8f3;
+    --texto-violeta-oscuro: #12013c;
+    --texto-llamativo: red;
+    --header-height: calc(80px + 2vw);
+}
+
+body{
+    font-family: 'Montserrat','sans-serif';
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: var(--fondo-oscuro);
+}
+
+/* ESTILOS DE CABECERA PRINCIPAL*/
+
+/*-------------------------------------------------------------------------------------*/
+/* Navegacion - MENU  */
+
+nav{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: var(--fondo-naranja-claro) solid 2px;
+    min-height: var(--header-height);
+}
+
+.logo{
+    flex: 1 1 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1%;
+}
+
+.logo>img{
+    flex: 1 1 49%;
+    max-width: 25%;
+    height: auto;
+}
+
+.logo>h1{
+    flex: 1 1 50%;
+    color:var(--fondo-claro);
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    font-size: 180%; 
+}
+.menu{
+    flex: 1 1 50%;
+    border: var(--fondo-naranja-claro) solid 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu-text{
+    color: var(--fondo-naranja-claro);
+    text-decoration: none;
+    padding: 5% 6%;
+    border-radius: 5px;
+}
+.menu-text:hover{
+    color: var(--fondo-oscuro);
+    background-color: var(--fondo-naranja-claro);
+    border-radius: 5px;
+    transition: 0.8s;
+
+}
+
+.nav-button-cerrar{
+    font-family:'Montserrat','sans-serif' ;
+    background-color: var(--fondo-naranja-claro);
+    border-radius: 5px;
+    color: var(--fondo-oscuro);
+    text-decoration: none;
+    padding: 1% 2%;
+}
+.nav-button-cerrar:hover{
+    background-color: var(--fondo-claro);
+    border-radius: 5px;
+    transition: 0.8s;
+    box-shadow: 5px 5px 2px 1px var(--texto-violeta-oscuro);
+    cursor: pointer;
+}
+/*-------------------------------------------------------------------------------------*/
+/* CABECERA - HEADER */
+
+header{
+    flex: 1 1 100%;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    
+}
+header>h1,h2{
+    text-align: center;
+    align-items: center;
+    color: var(--texto-blanco);
+}
+
+header>h1{
+    flex: 1 1 80%;
+    font-size: calc(26px + 2vw);
+    display: flex;
+    justify-content: center;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to left, LightYellow,yellow,Gold, orange,DarkOrange,OrangeRed, red, Crimson,DarkRed);    
+    background-size:300% ;
+    -webkit-background-clip: text;
+    animation: titulo-colores 3s linear infinite;
+    filter: drop-shadow(5px 5px 2px var(--texto-blanco));
+}
+
+@keyframes titulo-colores {
+    0%{
+        background-position: 0 50%;
+
+    }
+    50%{
+        background-position: 100% 50%;
+
+    }
+    100%{
+        background-position: 0 50%;
+
+    }
+}
+header>h2{
+    flex: 1 1 80%;
+    font-size: 150%;
+    color: var(--texto-blanco);
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN contenido general ----------------------------------------*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2%;
+}
+main>section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--fondo-oscuro);
+    filter: brightness(1.5);
+    border-radius: 20px;
+    padding: 2%;
+}
+.detalles>img{
+    flex: 1 1 15%;
+    max-width: 250px;
+    border-radius: 7px;
+    margin: 0 3%;
+}
+.detalles>article{
+    flex: 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.detalles{
+    padding: 2%;
+}
+.detalles>article>h1{
+    flex: 1 1 50%;
+    color: var(--fondo-claro);
+    font-size: 3vw;
+    text-align: center;
+}
+.resumen{
+    flex: 1 1 90%;
+    color: var(--fondo-naranja-claro);
+}
+.fecha{
+    flex: 1 1 40%;
+    color: var(--texto-blanco);
+    text-align: center;
+}
+.valorarizacion{
+    flex: 1 1 40%;
+    color: var(--texto-oscuro);
+    text-align: center;
+}
+
+/*  0 a 2: Generalmente se considera como una calificación baja o muy mala.
+    2 a 4: Calificación baja o por debajo del promedio.
+    4 a 6: Calificación promedio o aceptable.
+    6 a 8: Calificación buena o por encima del promedio.
+    8 a 10: Calificación alta o excelente. */
+
+    .detalles>article>.valorarizacion::after {
+        content: "Valorización: " attr(real);
+        color: var(--texto-oscuro);
+        font-weight: bold;
+        background: linear-gradient(to right,var(--fondo-oscuro), var(--valor));
+        border-radius: 0 8px;
+    }
+    /* Agregar color de fondo según categoria */
+
+    .detalles>article>.valorarizacion[entero='0'],
+    .detalles>article>.valorarizacion[entero='1'] {
+      --valor: #ff0000; /* Rojo */
+    }
+    
+    .detalles>article>.valorarizacion[entero='2'],
+    .detalles>article>.valorarizacion[entero='3'] {
+      --valor: #ff8800; /* Naranja */
+    }
+    
+    .detalles>article>.valorarizacion[entero='4'],
+    .detalles>article>.valorarizacion[entero='5'] {
+      --valor: #ffff00; /* Amarillo */
+    }
+    
+    .detalles>article>.valorarizacion[entero='6'],
+    .detalles>article>.valorarizacion[entero='7'] {
+      --valor: #c2b82a; /* Verde claro */
+    }
+
+    .detalles>article>.valorarizacion[entero='8'],
+    .detalles>article>.valorarizacion[entero='9'],
+    .detalles>article>.valorarizacion[entero='10'] {
+      --valor: #00ff00; /* Verde */
+    }
+article>a{
+    flex: 1 1 90%;
+    color: var(--fondo-naranja-claro);
+    text-align: center;
+}
+main>h1{
+    color: var(--texto-blanco);
+}
+.videos{
+    flex: 1 1 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    
+}
+.videos>h1{
+    flex: 1 1 90%;
+    color: var(--fondo-claro);
+    text-align: center;
+}
+.videos>iframe{
+    margin: 2%;
+    width: 450px;
+    height: 264px;
+}
+
+.productoras{
+    flex: 1 1 95%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+}
+.productoras>h1{
+    color: var(--fondo-claro);
+    flex: 1 1 90%;
+    text-align: center;
+}
+.productoras>article{
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%;
+    text-align: center;
+}
+.productoras>article>p{
+    color: var(--fondo-naranja-claro);
+}
+
+.productoras>article>img{
+    max-width: 200px;
+    align-items: center;
+    margin: 2%;
+}
+
+
+@media (max-width: 780px) {
+
+    .logo{
+        flex: 1 1 80%;
+    }
+    .menu{
+        flex: 1 1 90%;
+    }
+
+    .detalles>article>h1{
+        margin: 5% 0;
+    }
+
+    .detalles>article>.resumen{
+        text-align: justify;
+    }
+
+    .fecha{
+        flex: 1 1 80%;
+        margin: 2%;
+    }
+    .valorarizacion{
+        flex: 1 1 80%;
+        margin: 2%;
+    }
+    .videos>iframe{
+        width: 300px;
+        height: 197px;
+    }
+    .productoras>article{
+        flex: 1 1 40%;
+    }
+}

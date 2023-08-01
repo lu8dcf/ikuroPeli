@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    
+    <title>IkuroPeli</title>
+
+    <!-- ICONO DE PESTAÑA / VENTANA / SOLAPA -->
+    <link rel="icon" href="./img/iconois.ico" />
+
+    <!-- LINK DE CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    
+
+</head>
+<body>
+
+     <!-- menu de navegacion -->
+     <nav>
+        <section class="logo">
+            <img src="img/logo-modified.png" alt="Logo de la pagina">
+            <h1>IkuroSoft</h1>
+        </section>
+
+        <section class="menu">
+            <a href="index.html"><span class="menu-text"> Inicio </span> </a>
+                       
+            <a href="contacto.html" target="_blank"> <span class="menu-text"> Contáctanos </span></a>
+            
+        </section>
+
+        <section class="busqueda">
+            <h1> Filtros de busqueda </h1>
+            <select class="sel-generos" id="generos" onchange="obtenerPeliculasPorGenero()">
+                <option value="Action">Todas</option>
+            </select>
+            <input class="texto-busca" type="text" placeholder="Ingrese un texto" id="textoBusqueda">
+            <button id="btn-buscar" class="nav-button-cerrar">Buscar</button>
+        </section>
+    </nav>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>IkuroPeli</h1>
+        <h2> Todas tus peliculas en un sitio web</h2>
+        <img src="./img/carrete.png" alt="Rollo de películas" class="animacion-rotacion">
+
+    </header>
+
+    
+    <!-- Aside - Peliculas recomendadas -->
+
+    <aside>
+        <h1> Recomendadas </h1>
+        <section id="recomendada"> </section>
+    </aside>
+
+    <!-- Main - Presentacion de las peliculas -->
+    <main id="main-pelis">
+        
+        <section class="muestraPelis" id="muestraPelis"></section>
+
+        <section class="paginacion">
+            <button class="btnAnterior" id="btnAnterior">
+                <i class="fa-solid fa-arrow-up fa-beat-fade"></i>
+                Anterior
+            </button>
+            <button class="btnSiguiente" id="btnSiguiente">Siguiente
+                <i class="fa-solid fa-arrow-up fa-beat-fade"></i>
+            </button>
+        </section>
+  
+
+    </main>
+
+    <!-- Pie de Página -->
+
+    <footer>
+        <section class="footer-contador">
+            <div id="histats_counter"></div>
+        </section>
+        <section class="footer-texto">
+            <h1> IkuroSoft Derechos Reservados 2023</h1>
+            <h2>Creado por Alonso Lucia y Alonso Heber</h2>
+        </section>
+
+        <section class="footer-redes">
+            <!-- iconos de redes sociales -->
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://m.facebook.com/IkuroSoft?refid=52&__tn__=%2Cg" target="_blank">
+                <i class="fa-brands fa-facebook-square"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=uVhtDGQwY9E" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </section>
+    </footer>
+
+    <!-- LINK DE JS -->
+    <script src="./js/index.js"></script>
+    <!-- LINK DE FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/714631fdeb.js" crossorigin="cat-space"></script>
+</body>
+</html>
