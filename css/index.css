@@ -311,18 +311,15 @@ main{
 }
 
 .muestraPelis>article>a>h1{
-    
     color: var(--texto-violeta-oscuro);
     font-size: 100%;
     text-align: center;
     text-shadow: 0 0 2px var(--fondo-naranja-claro);
     z-index: 3;
-    
 }
 
 .paginacion>button{
     position: fixed;
-    
     border-radius: 5px;
     color: var(--texto-blanco);
     background-color: var(--fondo-llamativo);
@@ -341,15 +338,11 @@ main{
     z-index: 4;
 }
 
-
-
-
 /* PRINCIPAL */
 main{
     flex: 1 1 70%;
     display: flex;
     background-color: var(--fondo-claro);
-    
 }
 
 
@@ -369,7 +362,6 @@ footer{
     justify-content: space-around;
     align-items: center;
     border-top: var(--fondo-oscuro) solid 10px;
-    
 }
 .footer-contador{
     z-index: 3;
@@ -385,8 +377,6 @@ footer>.footer-texto>h1,h2{
     text-shadow: 0 0 2px var(--fondo-claro);
     font-size: 110%;
     text-align: center;
-    
-    
 }
 .footer-redes{
     flex: 1 1 25%;
@@ -397,7 +387,6 @@ footer>.footer-texto>h1,h2{
 
 .footer-redes>a>i{
     font-size: 200%;
-    
 }
 
 /* ------------------------------------------------------------------------------------------------------- */

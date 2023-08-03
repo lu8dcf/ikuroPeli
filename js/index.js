@@ -295,14 +295,13 @@ window.addEventListener('resize', botones); // cambio de tamaño o forma de la v
 
     var izquierdo = parseInt(containerMain.left); // propiedad de "left" del MAIN
     var tope = parseInt(containerMain.top); // valor del main en altura
+    
 
     var alturaVisible = window.innerHeight; // altura de la ventana visible
 
     // si el MAIN se encuentra -- VISIBLE --
     if (containerMain.top < window.innerHeight ) {
       // se muestran los botones
-      console.log(pagina)
-
       // si es la primer pagina no aparece el boton "anterior" ya que no se puede retroceder
       if (pagina == 1){
         buttonA.style.display = 'none';
@@ -315,24 +314,25 @@ window.addEventListener('resize', botones); // cambio de tamaño o forma de la v
         buttonS.style.display = 'none';
       }else{
         buttonS.style.display = 'block';
-      }
-      
+      }      
       //-- ubicacion HORIZONTAL ---
       // el caso del boton "siguiente" es fijo del lado derecho del contenedor
       // pero el boton "anterior" se debe ajustar al extremo izquierdo (left) del contenedor MAIN, 
       // el cual cambia con las diferentes resoluciones y no debe solaparse en el ASIDE
+      
       buttonA.style.left = 0.86 * izquierdo + 'px'; // asignacion de ubicación izquierda del boton "anterior"
+      
 
       // --ubicación VERTICAL ---
-      // si el tope del MAIN esta por debajo de la mitad de la ventana
-      if (alturaVisible/2 < tope){
+      // si el tope del MAIN esta por debajo del 80% de la ventana
+      if (alturaVisible/1.2 < tope){
         // coloca los botones el tope del MAIN
         buttonA.style.top = tope + 'px';
         buttonS.style.top = tope + 'px';
       }else{
-        // sino coloca los botones a la mitad de la ventana visible
-        buttonA.style.top = alturaVisible/2 + 'px';
-        buttonS.style.top = alturaVisible/2 + 'px';
+        // sino coloca los botones al 80%  de la ventana visible
+        buttonA.style.top = alturaVisible/1.2 + 'px';
+        buttonS.style.top = alturaVisible/1.2 + 'px';
       }
     } else {
       // si no esta el MAIN visible en la ventana oculta los botones
